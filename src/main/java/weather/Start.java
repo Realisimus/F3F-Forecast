@@ -18,6 +18,7 @@ public class Start {
         ArrayList<WindProperties> windTable = GetWindguruForecast.get(Places.ODESSA);
 
 
+
     }
 
 }
