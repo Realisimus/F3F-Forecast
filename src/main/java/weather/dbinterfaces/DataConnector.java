@@ -1,6 +1,6 @@
 package weather.dbinterfaces;
 
-import weather.dbinterfaces.mysql.sql;
+import weather.dbinterfaces.mysql.sqlConnector;
 
 public class DataConnector {
 
@@ -8,7 +8,7 @@ public class DataConnector {
 
     public static synchronized DataObject getDb() {
         if (db == null)
-            db = new sql();
+            db = new sqlConnector();
         return db;
     }
 

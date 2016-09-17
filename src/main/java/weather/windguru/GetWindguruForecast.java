@@ -8,7 +8,11 @@ import java.util.ArrayList;
 public class GetWindguruForecast {
 
     public static ArrayList<WindProperties> get(Places place) throws IOException {
-        return WindguruRawParser.parse(place);
+
+        String windPropertiesRaw = GetWindguruRaw.get(place);
+        ArrayList<WindProperties> windProperties = WindguruRawParser.parse(windPropertiesRaw);
+
+        return windProperties;
     }
 
 }

@@ -6,12 +6,12 @@ import weather.libs.Round;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Properties;
 
 class WindguruRawParser {
 
-    static ArrayList<WindProperties> parse(Places place) throws IOException {
+    static ArrayList<WindProperties> parse(String rawData) throws IOException {
 
-        String rawData = GetWindguruRaw.get(place);
         ArrayList<WindProperties> windTable = new ArrayList<WindProperties>();
 
         String startTime = rawData.substring(
