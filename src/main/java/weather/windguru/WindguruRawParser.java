@@ -1,18 +1,16 @@
 package weather.windguru;
 
 import weather.WindProperties;
+import weather.WindTable;
 import weather.libs.Round;
-
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Properties;
 
 class WindguruRawParser {
 
-    static ArrayList<WindProperties> parse(String rawData) throws IOException {
+    static WindTable parse(String rawData) throws IOException {
 
-        ArrayList<WindProperties> windTable = new ArrayList<WindProperties>();
+        WindTable windTable = new WindTable();
 
         String startTime = rawData.substring(
                 rawData.indexOf("\"initstamp\":") + 12,

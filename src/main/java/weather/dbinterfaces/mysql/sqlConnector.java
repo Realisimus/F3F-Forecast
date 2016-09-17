@@ -1,14 +1,17 @@
 package weather.dbinterfaces.mysql;
 
+import weather.WindTable;
 import weather.dbinterfaces.DataObject;
 
-public class sqlConnector implements DataObject {
+public class sqlConnector implements DataObject<WindTable>{
 
-    public void save(Object entity) {
-
+    @Override
+    public void save(WindTable entity) {
+        sqlSave.save(entity);
     }
 
-    public Object get() {
-        return null;
+    @Override
+    public WindTable get() {
+        return (WindTable) sqlGet.get();
     }
 }
