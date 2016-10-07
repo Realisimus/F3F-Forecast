@@ -12,6 +12,6 @@ public class sqlConnector implements DataObject<WindTable>{
 
     @Override
     public WindTable get() {
-        return (WindTable) sqlGet.get();
+        return sqlGet.get();
     }
 }
