@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Forecast F3F</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
 <body>
 
 <script>
 
+    var jsonString
+
+    $.getJSON('/week').then(function(info){
+        alert(info);
+        jsonString = info;
+    });
+
+    alert(jsonString)
+
+    for (var key in jsonString) {
+        var val = jsonString [key];
+        alert (key+' = '+val);
+    }
 
 </script>
 
