@@ -11,7 +11,7 @@ import java.io.IOException;
 @Controller
 public class MainController {
 
-    @RequestMapping(value = "/week", method = RequestMethod.GET)
+    @RequestMapping(value = "/week.json", method = RequestMethod.GET)
     public @ResponseBody WindTable getWeeklyForecast() {
         return (WindTable) DataConnector.getDb().get();
     }
